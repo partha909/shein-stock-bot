@@ -73,16 +73,21 @@ async def stock_loop(context: ContextTypes.DEFAULT_TYPE):
                 )
 
 def main():
-    def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("approve", approve))
+    app.add_handler(MessageHandler(filters.PHOTO, handle_payment_proof))
 
-    job_queue = app.job_queue
-    job_queue.run_repeating(stock_loop, interval=STOCK_INTERVAL, first=10)
+    app.job_queue.run_repeating(
+        stock_loop,
+        interval=STOCK_INTERVAL,
+        first=10
+    )
 
-    print("🤖 Bot started...")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    print("🚀 SHEIN STOCK BOT RUNNING")
+    app.run_polling()
+
 
 
 if __name__ == "__main__":
