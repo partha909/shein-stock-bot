@@ -1,4 +1,4 @@
-import requests
+import os
 from bs4 import BeautifulSoup
 from telegram import Update
 from telegram.ext import (
@@ -9,7 +9,8 @@ from telegram.ext import (
     filters,
 )
 
-BOT_TOKEN = "7814761302:AAEHwqongjJ-hfYO9IZqVMIlWCMzKp6rsno"
+BOT_TOKEN = os.environ.get("7814761302:AAEHwqongjJ-hfYO9IZqVMIlWCMzKp6rsno")
+
 ADMIN_ID = 8210342937
 STOCK_INTERVAL = 15
 
@@ -72,11 +73,17 @@ async def stock_loop(context: ContextTypes.DEFAULT_TYPE):
                 )
 
 def main():
+    def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
+
     app.add_handler(CommandHandler("start", start))
-    app.job_queue.run_repeating(stock_loop, interval=STOCK_INTERVAL, first=10)
-    print("🚀 BOT RUNNING")
-    app.run_polling()
+
+    job_queue = app.job_queue
+    job_queue.run_repeating(stock_loop, interval=STOCK_INTERVAL, first=10)
+
+    print("🤖 Bot started...")
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
+
 
 if __name__ == "__main__":
     main()
