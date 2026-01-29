@@ -73,7 +73,9 @@ async def stock_loop(context: ContextTypes.DEFAULT_TYPE):
                 )
 
 def main():
+   def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
+    app.run_polling()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("approve", approve))
