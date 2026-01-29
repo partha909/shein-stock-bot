@@ -11,7 +11,7 @@ from telegram.ext import (
 
 BOT_TOKEN = os.environ.get("7814761302:AAGJ2vEY8aGzCy50Rw0ryUwSjfs_hIjWDoI")
 ADMIN_ID = 8210342937
-STOCK_INTERVAL = 15
+STOCK_INTERVAL = 10
 
 PRODUCTS = [
     {
