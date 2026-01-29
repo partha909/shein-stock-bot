@@ -17,8 +17,40 @@ STOCK_INTERVAL = 60  # seconds
 
 PRODUCTS = [
     {
-        "name": "Test Product",
-        "url": "https://www.sheinindia.in/"
+        "name": "Drop Shoulder Graphic Sweatshirt",
+        "url": "https://www.sheinindia.in/shein-shein-drop-shoulder-graphic-front-print-crew-sweatshirt/p/443380970_greymelange"
+    },
+    {
+        "name": "Street Cargo Jeans",
+        "url": "https://www.sheinindia.in/shein-shein-street-full-length-straight-cargo-jeans-with-pockets/p/443320446_blue"
+    },
+    {
+        "name": "Typographic Print T-Shirt",
+        "url": "https://www.sheinindia.in/shein-shein-drop-shoulder-typographic-chest-print-relaxed-fit-tshirt/p/443323021_black"
+    },
+    {
+        "name": "Cargo Track Pants",
+        "url": "https://www.sheinindia.in/shein-shein-activewear-side-cargo-flap-pockets-straight-trackpants/p/443317440_grey"
+    },
+    {
+        "name": "Low Rise Track Shorts",
+        "url": "https://www.sheinindia.in/shein-shein-elasticated-drawstring-waist-low-rise-track-shorts/p/443332092_dkgrey"
+    },
+    {
+        "name": "Checks Cuban Collar Shirt",
+        "url": "https://www.sheinindia.in/shein-shein-checks-print-cuban-collar-short-sleeve-knitted-shirt/p/443317629_green"
+    },
+    {
+        "name": "Graphic Placement T-Shirt",
+        "url": "https://www.sheinindia.in/shein-shein-short-sleeves-graphic-placement-print-crew-tshirt/p/443329853_green"
+    },
+    {
+        "name": "Floral Cuban Collar Shirt",
+        "url": "https://www.sheinindia.in/shein-shein-cuban-collar-short-sleeves-floral-print-shirt/p/443321661_grey"
+    },
+    {
+        "name": "Distressed Black Jeans",
+        "url": "https://www.sheinindia.in/shein-shein-full-length-fixed-waist-mid-wash-distressed-jeans/p/443330229_black"
     }
 ]
 
