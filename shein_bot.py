@@ -9,8 +9,7 @@ from telegram.ext import (
     filters,
 )
 
-BOT_TOKEN = os.environ.get("7814761302:AAEHwqongjJ-hfYO9IZqVMIlWCMzKp6rsno")
-
+BOT_TOKEN = os.environ.get("7814761302:AAGJ2vEY8aGzCy50Rw0ryUwSjfs_hIjWDoI")
 ADMIN_ID = 8210342937
 STOCK_INTERVAL = 15
 
