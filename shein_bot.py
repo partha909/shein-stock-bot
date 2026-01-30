@@ -1,17 +1,10 @@
 import os
-from bs4 import BeautifulSoup
-from telegram import Update
-from telegram.ext import (
-    ApplicationBuilder,
-    CommandHandler,
-    MessageHandler,
-    ContextTypes,
-    filters,
-)
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+
 if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN not found in environment variables")
+    raise RuntimeError("BOT_TOKEN not found in environment variables")
+
 
 ADMIN_ID = 8210342937
 STOCK_INTERVAL = 10
